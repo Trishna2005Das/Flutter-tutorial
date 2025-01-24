@@ -8,9 +8,6 @@ void main(){
 //stateful widget
 //custom widget
 
-
-//material design
-//cupertino design
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
   @override
@@ -18,5 +15,4 @@ class MyApp extends StatelessWidget{
     return constText("hello world",textDirection: TextDirection.rtl);
   }
 }
-//while returing widget we use const because it is static.It does not have to be rebuilt.
-//Text is a widget that displays text on screen
+//while returing widget we use const because 

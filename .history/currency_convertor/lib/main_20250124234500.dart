@@ -9,8 +9,7 @@ void main(){
 //custom widget
 
 
-//material design
-//cupertino design
+//ma
 class MyApp extends StatelessWidget{
   const MyApp({super.key});
   @override
