@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// import 'package:currency_convertor/pages/currency.dart';
-import 'currency.dart'; 
+
 void main(){
   runApp(const MyApp());
 }
@@ -16,9 +15,7 @@ class MyApp extends StatelessWidget{
   const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home:CurrencyConverter(),
-    );
+    
   }
 }
 //Material tree is a collection of widgets.

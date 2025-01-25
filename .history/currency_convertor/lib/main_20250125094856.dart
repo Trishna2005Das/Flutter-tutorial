@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 // import 'package:currency_convertor/pages/currency.dart';
-import 'currency.dart'; 
+import './pages/currency.dart'; 
 void main(){
   runApp(const MyApp());
 }
