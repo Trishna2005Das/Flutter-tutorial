@@ -37,13 +37,7 @@ style:TextStyle(
                     //   borderSide: BorderSide(color: Colors.white),
                     // ),
                     hintText: 'Please enter the amount in INR',
-                    hintStyle: TextStyle(
-                      color: Colors.white,
-                      ),
-                      prefixIcon:Icon(Icons.monetization_on),
-                      prefixIconColor: Colors.white,
-                      filled: true,
-                      fillColor: Color.fromARGB(255, 39, 190, 213),
+                    hintStyle: TextStyle()
                 ),
               ),
           ],

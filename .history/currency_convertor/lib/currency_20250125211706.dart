@@ -41,7 +41,7 @@ style:TextStyle(
                       color: Colors.white,
                       ),
                       prefixIcon:Icon(Icons.monetization_on),
-                      prefixIconColor: Colors.white,
+                      //prefixIconColor: Colors.white,
                       filled: true,
                       fillColor: Color.fromARGB(255, 39, 190, 213),
                 ),

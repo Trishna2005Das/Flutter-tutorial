@@ -42,7 +42,7 @@ style:TextStyle(
                       ),
                       prefixIcon:Icon(Icons.monetization_on),
                       prefixIconColor: Colors.white,
-                      filled: true,
+                      //filled: true,
                       fillColor: Color.fromARGB(255, 39, 190, 213),
                 ),
               ),
