@@ -30,7 +30,7 @@ class CurrencyConverter extends StatelessWidget {
                 color: Color.fromARGB(255, 255, 255, 255),
               ),
             ),
-
+             
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
@@ -49,19 +49,13 @@ class CurrencyConverter extends StatelessWidget {
                   focusedBorder: border,
                   enabledBorder: border,
                 ),
-                keyboardType: TextInputType.numberWithOptions(
-                  decimal: true,
-                ),
+              keyboardType: TextInputType.numberWithOptions(
+                decimal: true,),
               ),
             ),
             //button=raised and appears like a text
             //appears like a text
-            TextButton(
-              onPressed: (){
-                print('converted');
-              },
-              child: Text('Convert'),
-            )
+            TextButton(onPressed: () => {}, child: const Text('Convert'),)
           ],
         ),
       ),

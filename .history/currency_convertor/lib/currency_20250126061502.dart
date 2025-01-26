@@ -57,7 +57,7 @@ class CurrencyConverter extends StatelessWidget {
             //button=raised and appears like a text
             //appears like a text
             TextButton(
-              onPressed: (){
+              onPressed: () => {
                 print('converted');
               },
               child: Text('Convert'),
