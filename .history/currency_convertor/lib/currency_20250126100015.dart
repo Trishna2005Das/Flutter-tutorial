@@ -9,7 +9,7 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
 
   @override
   Widget build(BuildContext context) {
-    print('rebuild');
+    print
     double result=0;
     final border = OutlineInputBorder(
       borderSide: const BorderSide(

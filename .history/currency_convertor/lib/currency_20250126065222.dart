@@ -1,16 +1,11 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-//1.Create a variable that dstores the currency value
-//2.Create a function that converts the currency
-//3.Display the value of the variable we created
-//4.Display the variable
-class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
-  CurrencyConverter({super.key});
-  final TextEditingController controller= TextEditingController();  
+
+class CurrencyConverter extends StatelessWidget {
+  const CurrencyConverter({super.key});
 
   @override
   Widget build(BuildContext context) {
-    print('rebuild');
-    double result=0;
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
         color: Color.fromARGB(255, 250, 250, 250),
@@ -23,25 +18,13 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
     );
 
     return Scaffold(
-
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-      appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
-        title: const Text(
-          'Currency Converter',
-          style: TextStyle(
-            color: Color.fromARGB(255, 255, 255, 255),
-                 
-          ),
-        ),
-        centerTitle: true,
-      ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              result.toString(),
+            const Text(
+              '0',
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -52,7 +35,6 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-               controller: controller,
                 style: const TextStyle(
                   color: Colors.white,
                 ),
@@ -77,22 +59,26 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
             //appears like a text
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextButton(//returns void
+              child: ElevatedButton(//returns void
                 onPressed: (){
-                result=(double.parse(controller.text)*86.5);
-                build(context);
+                 if(kDebugMode){
+                   print('converted');
+                 }
+              
                   // debugPrint('converted');
                 },//when we pass a function as parameter so we caanot make TextButton const widget even though it has a const constructor
-                style: TextButton.styleFrom(
-                 backgroundColor: Colors.lightGreen,
-    foregroundColor: Colors.white,
-    minimumSize: Size(double.infinity, 50),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(
-        Radius.circular(10),
-      ),
-    ),
-  
+                style: const ButtonStyle(
+                  elevation: WidgetStatePropertyAll(30),
+                  ,
+                  backgroundColor: WidgetStatePropertyAll(
+                    Colors.lightGreen
+                  ),
+                  foregroundColor: WidgetStatePropertyAll(
+                    Colors.white
+                  ),
+                  minimumSize: WidgetStatePropertyAll(
+                    Size(double.infinity, 50)
+                  )
                 ),
               
                 child: Text('Convert'),

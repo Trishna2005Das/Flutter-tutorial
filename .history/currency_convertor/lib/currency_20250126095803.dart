@@ -9,7 +9,6 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
 
   @override
   Widget build(BuildContext context) {
-    print('rebuild');
     double result=0;
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
@@ -80,7 +79,7 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
               child: TextButton(//returns void
                 onPressed: (){
                 result=(double.parse(controller.text)*86.5);
-                build(context);
+              
                   // debugPrint('converted');
                 },//when we pass a function as parameter so we caanot make TextButton const widget even though it has a const constructor
                 style: TextButton.styleFrom(

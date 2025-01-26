@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 //1.Create a variable that dstores the currency value
 //2.Create a function that converts the currency
@@ -9,7 +10,6 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
 
   @override
   Widget build(BuildContext context) {
-    print('rebuild');
     double result=0;
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
@@ -40,8 +40,8 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              result.toString(),
+            const Text(
+              '0',
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -80,7 +80,7 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
               child: TextButton(//returns void
                 onPressed: (){
                 result=(double.parse(controller.text)*86.5);
-                build(context);
+              
                   // debugPrint('converted');
                 },//when we pass a function as parameter so we caanot make TextButton const widget even though it has a const constructor
                 style: TextButton.styleFrom(

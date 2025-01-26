@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 //2.Create a function that converts the currency
 //3.Display the value of the variable we created
 //4.Display the variable
+ double result=0;
 class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
   CurrencyConverter({super.key});
   final TextEditingController controller= TextEditingController();  
@@ -10,7 +11,7 @@ class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
   @override
   Widget build(BuildContext context) {
     print('rebuild');
-    double result=0;
+   
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
         color: Color.fromARGB(255, 250, 250, 250),
