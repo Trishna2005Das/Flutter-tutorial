@@ -7,19 +7,21 @@ import 'package:flutter/material.dart';
 
 class Currency extends StatefulWidget {
   const Currency({super.key});
-  
 
   @override
-  State <Currency> createState() => _CurrencyState();
+  State<Currency> createState() => _CurrencyState();
 }
-class _CurrencyState extends State <Currency>{
-  double result=0;
-   final TextEditingController controller= TextEditingController(); 
- 
+
+class _CurrencyState extends State<Currency> {//State makes this class mutable as widgets are immutable
+  double result = 0;
+  final TextEditingController controller = TextEditingController();
+  void convert() {
+    result = (double.parse(controller.text) * 86.5);
+    setState(() {});
+  }
+
   @override
   Widget build(BuildContext context) {
-    
-    
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
         color: Color.fromARGB(255, 250, 250, 250),
@@ -32,7 +34,6 @@ class _CurrencyState extends State <Currency>{
     );
 
     return Scaffold(
-
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 0, 0, 0),
@@ -40,7 +41,6 @@ class _CurrencyState extends State <Currency>{
           'Currency Converter',
           style: TextStyle(
             color: Color.fromARGB(255, 255, 255, 255),
-                 
           ),
         ),
         centerTitle: true,
@@ -61,7 +61,7 @@ class _CurrencyState extends State <Currency>{
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: TextField(
-               controller: controller,
+                controller: controller,
                 style: const TextStyle(
                   color: Colors.white,
                 ),
@@ -86,28 +86,22 @@ class _CurrencyState extends State <Currency>{
             //appears like a text
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: TextButton(//returns void
-                onPressed: (){
-                result=(double.parse(controller.text)*86.5);
-                  setState(() {
-                    
-                  });
-                  // debugPrint('converted');
-                },//when we pass a function as parameter so we caanot make TextButton const widget even though it has a const constructor
+              child: TextButton(
+                //returns void
+                onPressed: convert, //cannot call convert() as it is a function of void type so if we call the function you return a type of void and we cannot assign void 
+                //when we pass a function as parameter so we cannot make TextButton const widget even though it has a const constructor
                 style: TextButton.styleFrom(
-                 backgroundColor: Colors.lightGreen,
-    foregroundColor: Colors.white,
-    minimumSize: Size(double.infinity, 50),
-    shape: RoundedRectangleBorder(
-      borderRadius: BorderRadius.all(
-        Radius.circular(10),
-      ),
-    ),
-  
+                  backgroundColor: Colors.lightGreen,
+                  foregroundColor: Colors.white,
+                  minimumSize: Size(double.infinity, 50),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(10),
+                    ),
+                  ),
                 ),
-              
+
                 child: Text('Convert'),
-                
               ),
             )
           ],
@@ -115,7 +109,6 @@ class _CurrencyState extends State <Currency>{
       ),
     );
   }
-  
 }
 // class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
   
