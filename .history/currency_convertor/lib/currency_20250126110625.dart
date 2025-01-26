@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+i
 //1.Create a variable that dstores the currency value
 //2.Create a function that converts the currency
 //3.Display the value of the variable we created
@@ -7,19 +7,20 @@ import 'package:flutter/material.dart';
 
 class Currency extends StatefulWidget {
   const Currency({super.key});
-  
+  }
 
   @override
   State <Currency> createState() => _CurrencyState();
-}
+
 class _CurrencyState extends State <Currency>{
   double result=0;
-   final TextEditingController controller= TextEditingController(); 
+  
  
   @override
   Widget build(BuildContext context) {
     
-    
+    double result=0;
+     final TextEditingController controller= TextEditingController(); 
     final border = OutlineInputBorder(
       borderSide: const BorderSide(
         color: Color.fromARGB(255, 250, 250, 250),
@@ -50,7 +51,7 @@ class _CurrencyState extends State <Currency>{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'INR $result',
+              result.toString(),
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -66,7 +67,7 @@ class _CurrencyState extends State <Currency>{
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Please enter the amount in USD',
+                  hintText: 'Please enter the amount in INR',
                   hintStyle: const TextStyle(
                     color: Colors.white,
                   ),
@@ -89,9 +90,7 @@ class _CurrencyState extends State <Currency>{
               child: TextButton(//returns void
                 onPressed: (){
                 result=(double.parse(controller.text)*86.5);
-                  setState(() {
-                    
-                  });
+                build(context);
                   // debugPrint('converted');
                 },//when we pass a function as parameter so we caanot make TextButton const widget even though it has a const constructor
                 style: TextButton.styleFrom(

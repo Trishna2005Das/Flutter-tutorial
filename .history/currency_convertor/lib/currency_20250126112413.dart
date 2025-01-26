@@ -50,7 +50,7 @@ class _CurrencyState extends State <Currency>{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'INR $result',
+              result.toString(),
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
@@ -66,7 +66,7 @@ class _CurrencyState extends State <Currency>{
                   color: Colors.white,
                 ),
                 decoration: InputDecoration(
-                  hintText: 'Please enter the amount in USD',
+                  hintText: 'Please enter the amount in ',
                   hintStyle: const TextStyle(
                     color: Colors.white,
                   ),

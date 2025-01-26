@@ -50,7 +50,7 @@ class _CurrencyState extends State <Currency>{
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'INR $result',
+              'INR ${result.toString()}',
               style: TextStyle(
                 fontSize: 50,
                 fontWeight: FontWeight.bold,
