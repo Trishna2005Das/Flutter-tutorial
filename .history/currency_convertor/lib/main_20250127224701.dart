@@ -1,4 +1,4 @@
-// import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 // import 'package:currency_convertor/pages/currency.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:currency_convertor/currency_cupertino_app.dart';
@@ -26,7 +26,7 @@ void main(){
 
 //while returing widget we use const because it is static.It does not have to be rebuilt.
 //Text is a widget that displays text on screen
-//cupertino design
+
 
 class MyCupertinoApp extends StatelessWidget {
   const MyCupertinoApp({super.key});
