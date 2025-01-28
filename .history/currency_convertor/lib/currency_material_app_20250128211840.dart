@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-//1.Create a variable that dstores the currency value
-//2.Create a function that converts the currency
-//3.Display the value of the variable we created
-//4.Display the variable
 class Currency extends StatefulWidget {
   const Currency({super.key});
 
@@ -20,8 +16,7 @@ class _CurrencyState extends State<Currency> {
   String selectedCurrency = 'usd'; // Default source currency
   String targetCurrency = 'inr'; // Default target currency
 
-  @override
-  void initState() {
+    void initState() {
     super.initState();
     fetchConversionRate(); // Fetch initial conversion rate
   }
@@ -43,13 +38,12 @@ class _CurrencyState extends State<Currency> {
       print('Error: $e');
     }
   }
-
   void convert() {
     double input = double.tryParse(controller.text) ?? 0;
     result = input * conversionRate;
     setState(() {});
   }
-
+ 
   @override
   Widget build(BuildContext context) {
     final border = OutlineInputBorder(
@@ -178,7 +172,15 @@ class _CurrencyState extends State<Currency> {
     );
   }
 }
-//3 types of mode in flutter
+
+// class CurrencyConverter extends StatelessWidget { //statelss widget is immutable
+  
+
+//   @override
+  
+// }
+
+ //3 types of mode in flutter
   //debug,release,profile
   //debug->debug mode-it is the default mode 
   //release->release mode- it is the production mode

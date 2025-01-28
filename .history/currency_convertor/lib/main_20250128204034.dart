@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:currency_convertor/currency_material_app.dart';
+import 'package:currency_convertor/pages/currency.dart';
 // import 'package:flutter/cupertino.dart';
 // import 'package:currency_convertor/currency_cupertino_app.dart';
 void main(){
-  runApp(MyApp());
+  runApp(MyCupertinoApp());
 }
 //types of widget for ui
 //stateless widget
@@ -28,14 +28,14 @@ class MyApp extends StatelessWidget{
 //Text is a widget that displays text on screen
 //cupertino design
 
-// class MyCupertinoApp extends StatelessWidget {
-//   const MyCupertinoApp({super.key});
+class MyCupertinoApp extends StatelessWidget {
+  const MyCupertinoApp({super.key});
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return const CupertinoApp(
-//       home: CurrencyConverterCupertino(),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    return const CupertinoApp(
+      home: CurrencyConverterCupertino(),
+    );
+  }
+}
 

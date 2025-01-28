@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:currency_convertor/currency_material_app.dart';
+import 'package:currency_convertor/pages/currency.dart';
 // import 'package:flutter/cupertino.dart';
 // import 'package:currency_convertor/currency_cupertino_app.dart';
 void main(){
-  runApp(MyApp());
+  runApp(MyCupertinoApp());
 }
 //types of widget for ui
 //stateless widget
@@ -13,15 +13,15 @@ void main(){
 
 //material design
 
-class MyApp extends StatelessWidget{
-  const MyApp({super.key});
-  @override
-  Widget build(BuildContext context) {
-    return const MaterialApp(
-      home:Currency(),
-    );
-  }
-}
+// class MyApp extends StatelessWidget{
+//   const MyApp({super.key});
+//   @override
+//   Widget build(BuildContext context) {
+//     return const MaterialApp(
+//       home:Currency(),
+//     );
+//   }
+// }
 //Material tree is a collection of widgets.
 
 //while returing widget we use const because it is static.It does not have to be rebuilt.

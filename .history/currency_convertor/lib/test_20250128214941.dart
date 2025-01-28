@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-//1.Create a variable that dstores the currency value
-//2.Create a function that converts the currency
-//3.Display the value of the variable we created
-//4.Display the variable
 class Currency extends StatefulWidget {
   const Currency({super.key});
 
@@ -83,7 +79,7 @@ class _CurrencyState extends State<Currency> {
             children: [
               Text(
                 '${targetCurrency.toUpperCase()} ${result.toStringAsFixed(2)}',
-                style: const TextStyle(
+                style: TextStyle(
                   fontSize: 50,
                   fontWeight: FontWeight.bold,
                   color: Colors.white,
@@ -178,8 +174,3 @@ class _CurrencyState extends State<Currency> {
     );
   }
 }
-//3 types of mode in flutter
-  //debug,release,profile
-  //debug->debug mode-it is the default mode 
-  //release->release mode- it is the production mode
-  //profile->profile mode  - it is the development mode        

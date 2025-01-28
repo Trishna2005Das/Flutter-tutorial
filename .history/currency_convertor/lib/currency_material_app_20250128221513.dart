@@ -2,10 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-//1.Create a variable that dstores the currency value
-//2.Create a function that converts the currency
-//3.Display the value of the variable we created
-//4.Display the variable
 class Currency extends StatefulWidget {
   const Currency({super.key});
 
